@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Siswa</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #eff6ff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 15px;
+            background: white;
+            color: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            font-weight: bold;
+            border: 4px solid #bfdbfe;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #dbeafe;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .content h2 {
+            color: #1e40af;
+            margin-bottom: 18px;
+            font-size: 20px;
+        }
+
+        .biodata {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .label {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .value {
+            color: #1e293b;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: right;
+        }
+
+        .button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 13px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        .footer {
+            background: #f8fafc;
+            text-align: center;
+            padding: 15px;
+            color: #64748b;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="avatar">IH</div>
+            <h1>Irham Hafidz</h1>
+            <p>Pelajar SMK Banjar Asri</p>
+        </div>
+
+        <div class="content">
+            <h2>Biodata Siswa</h2>
+
+            <div id="dataBiodata">
+                <div class="biodata">
+                    <span class="label">Nama Lengkap</span>
+                    <span class="value">Irham Hafidz</span>
+                </div>
+
+                <div class="biodata">
+                    <span class="label">Kelas</span>
+                    <span class="value">X TJKT 1</span>
+                </div>
+
+                <div class="biodata">
+                    <span class="label">Umur</span>
+                    <span class="value">15 Tahun</span>
+                </div>
+
+                <div class="biodata">
+                    <span class="label">Jenis Kelamin</span>
+                    <span class="value">Laki-laki</span>
+                </div>
+
+                <div class="biodata">
+                    <span class="label">Sekolah</span>
+                    <span class="value">SMK Banjar Asri</span>
+                </div>
+            </div>
+
+            <button class="button" onclick="toggleBiodata()">
+                Sembunyikan Biodata
+            </button>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Irham Hafidz | Website Biodata Siswa
+        </div>
+    </div>
+
+    <script>
+        function toggleBiodata() {
+            const data = document.getElementById("dataBiodata");
+            const button = document.querySelector(".button");
+
+            if (data.style.display === "none") {
+                data.style.display = "block";
+                button.textContent = "Sembunyikan Biodata";
+            } else {
+                data.style.display = "none";
+                button.textContent = "Tampilkan Biodata";
+            }
+        }
+    </script>
+
+</body>
+</html>
